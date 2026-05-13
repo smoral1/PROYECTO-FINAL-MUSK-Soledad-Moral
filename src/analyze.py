@@ -6,7 +6,7 @@ from client_collection import ClientCollection
 from sales_collection import SaleCollection
 import functional_utils as utils
 
-def run_analysis():
+def generate_report():
     with open('data/clients.json', 'r') as file:
         clients_data = json.load(file)
 
@@ -91,4 +91,4 @@ def run_analysis():
     print ("Análisis completado. Informe guardado en 'output_report.json'.")
 
 if __name__ == "__main__":
-    run_analysis()
+    generate_report()
