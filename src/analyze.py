@@ -1,10 +1,10 @@
 import json
 import pandas as pd
-from src.client import Client
-from src.sale import Sale
-from src.client_collection import ClientCollection
-from src.sales_collection import SaleCollection
-import src.functional_utils as utils
+from client import Client
+from sale import Sale
+from client_collection import ClientCollection
+from sales_collection import SalesCollection
+import functional_utils as utils
 
 def generate_report():
     with open('data/clients.json', 'r') as file:
@@ -16,7 +16,7 @@ def generate_report():
     sales_list = [Sale(**row) for row in sales_df.to_dict(orient='records')]
 
     client_col = ClientCollection(clients_list)
-    sales_col = SaleCollection(sales_list)
+    sales_col = SalesCollection(sales_list)
 
     # 1
     total_clients = len(clients_list)
