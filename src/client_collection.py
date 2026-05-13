@@ -9,4 +9,7 @@ class ClientCollection:
         return None
     
     def clients_by_country(self, country):
-        return [client for client in self.clients if client.country == country]
+        return [
+            client for client in self.clients
+              if client.country == country
+        ]
