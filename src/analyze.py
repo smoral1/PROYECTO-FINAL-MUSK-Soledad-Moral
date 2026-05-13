@@ -1,10 +1,10 @@
 import json
 import pandas as pd
-from client import Client
-from sale import Sale
-from client_collection import ClientCollection
-from sales_collection import SaleCollection
-import functional_utils as utils
+from src.client import Client
+from src.sale import Sale
+from src.client_collection import ClientCollection
+from src.sales_collection import SaleCollection
+import src.functional_utils as utils
 
 def generate_report():
     with open('data/clients.json', 'r') as file:
