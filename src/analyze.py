@@ -1,11 +1,16 @@
+import sys
+import os
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 import json
 import pandas as pd
 
-from .client import Client
-from .sale import Sale
-from .client_collection import ClientCollection
-from .sales_collection import SalesCollection
-from . import functional_utils as utils
+from src.client import Client
+from src.sale import Sale
+from src.client_collection import ClientCollection
+from src.sales_collection import SalesCollection
+from src import functional_utils as utils
 
 
 def generate_report():
