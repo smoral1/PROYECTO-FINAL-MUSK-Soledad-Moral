@@ -123,12 +123,6 @@ def generate_report():
             counts.get(sale.client_id, 0) + 1
         )
 
-    top_client_id = max(
-        counts,
-        key=counts.get,
-        default=None
-    )
-
 
     # 9
     high_spending_clients = [
