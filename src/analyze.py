@@ -77,6 +77,10 @@ def generate_report():
     # 6
     top_client_by_country = {}
 
+    countries = sorted(
+        utils.get_unique_countries(clients_list)
+    )
+
     countries = utils.get_unique_countries(
         clients_list
     )
